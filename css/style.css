@@ -26,7 +26,7 @@
 
     height: 100px;
     line-height: 100px;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.4);
     color: #fff;
     overflow: hidden;
 }
@@ -370,6 +370,7 @@
 .top_social .txt_box p {
     display: block;
     font-size: 14px;
+    line-height: 18px;
     color: #666;
     margin: 0 0 auto 0;
 }
