@@ -11,7 +11,8 @@ $(function () {
     })
 
     $('.visual_slide').slick({
-        arrows: true,
+        arrows: false,
+        dots: true,
         autoplay: true,
         autoplaySpeed: 2000,
     });

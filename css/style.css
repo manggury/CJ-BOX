@@ -1,3 +1,7 @@
+* {
+    outline: 1px solid tomato--;
+}
+
 .header {
     position: fixed;
     top: 0;
@@ -9,6 +13,7 @@
     line-height: 100px;
     background: rgba(0, 0, 0, 0.6);
     color: #fff;
+    overflow: hidden;
 }
 
 .header:hover {
@@ -34,19 +39,20 @@
 }
 
 .header.on h1 a {
-    background: url(../images/logo-dk.png) no-repeat center center/cover;
+    background: url(../images/logo_dark.svg) no-repeat center center/cover;
 }
 
 .header_wrap h1 a {
     display: inline-block;
-    width: 158px;
+    margin: 0 0 10px 0;
+    width: 147px;
     height: 60px;
     vertical-align: middle;
-    background: url(../images/logo-wh.png) no-repeat center center/cover;
+    background: url(../images/logo_white.svg) no-repeat center center/cover;
 }
 
 .header:hover h1 a {
-    background: url(../images/logo-dk.png) no-repeat center center/cover;
+    background: url(../images/logo_dark.svg) no-repeat center center/cover;
 }
 
 
@@ -142,46 +148,6 @@
     color: #fff;
 }
 
-.visual_slide .slick-arrow {
-    position: absolute;
-    top: 50%;
-    z-index: 999;
-
-    transform: translate(0, -50%);
-    font-size: 0;
-
-    background: transparent;
-    border: none;
-}
-
-
-
-.visual_slide .slick-prev {
-    left: 100px;
-}
-
-.visual_slide .slick-next {
-    right: 100px;
-}
-
-.visual_slide .slick-prev::after,
-.visual_slide .slick-next::after {
-    font-family: xeicon;
-    font-size: 60px;
-    font-weight: 500;
-    z-index: 999;
-    color: #ddd;
-    cursor: pointer;
-}
-
-.visual_slide .slick-prev::after {
-    content: "\e93d";
-}
-
-
-.visual_slide .slick-next::after {
-    content: "\e940";
-}
 
 
 .visual_wrap .imformation {
@@ -233,7 +199,38 @@
     outline: none;
 }
 
+.visual_slide .slick-dots {
+    position: absolute;
+    bottom: 150px;
+    left: 50%;
+    transform: translate(-50%, 0);
 
+}
+
+.visual_slide .slick-dots li {
+    position: relative;
+    display: inline-block;
+
+    border: none;
+    background: none;
+    font-size: 0;
+    margin: 0 15px;
+}
+
+.visual_slide .slick-dots li::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: #fff;
+}
+
+.visual_slide .slick-dots li.slick-active::after {
+    background: #027AC4;
+}
 
 /* main_newsㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
 .news_slide {
@@ -355,6 +352,17 @@
     margin: 0 0 32px 0;
 }
 
+
+.top_social .txt_box .more_btn {
+    border: 1px solid #000;
+    color: #000;
+}
+
+.top_social .txt_box .more_btn:hover {
+    border: 1px solid #027AC4;
+    color: #fff;
+}
+
 .social_slide {
     margin: 0 -15px;
 }
@@ -364,6 +372,7 @@
     margin: 0 15px;
     height: 300px;
     border: 1px solid #ddd;
+    cursor: pointer;
 }
 
 .social_slide .itm figure {
